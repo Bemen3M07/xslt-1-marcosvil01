@@ -16,6 +16,7 @@ python -m http.server 8000
 3.  [Filtrar precio y mostrar menor a 10](#102)
 4.  [Filtrar precio orden ascendente](#103)
 5.  [Mostar emojis verde y rojo](#104)
+6.  [Choose](#105)
 
 ## 1.0.0 
 Eliminar 'hola.txt' y 'adios.txt'.
@@ -83,6 +84,13 @@ Agregar emoji verde y rojo
     <xsl:if test="price &lt;= 10">
     &#128994;
     </xsl:if>
+```
+
+## 1.0.5
+
+Lo mismo que el anterior pero usando 
+```html 
+<xsl:choose> 
 ```
 
 ## Authors
