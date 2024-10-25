@@ -17,6 +17,7 @@ python -m http.server 8000
 4.  [Filtrar precio orden ascendente](#103)
 5.  [Mostar emojis verde y rojo](#104)
 6.  [Choose](#105)
+7.  [Cambiar for each por un apply template](#106)
 
 ## 1.0.0 
 Eliminar 'hola.txt' y 'adios.txt'.
@@ -92,6 +93,11 @@ Lo mismo que el anterior pero usando
 ```html 
 <xsl:choose> 
 ```
+
+## 1.0.6
+
+Aplicar xsl:apply-templates.
+ 
 
 ## Authors
 

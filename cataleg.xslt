@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" doctype-public="XSLT-compat"/>
 
+<!-- Template principal -->
 <xsl:template match="/">
 <html> 
 <head>
@@ -41,28 +42,32 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Filtrar por precio y ordenar por precio -->
-        <xsl:for-each select="catalog/cd[price]">
-          <tr>
-            <td><xsl:value-of select="title"/></td>
-            <td><xsl:value-of select="artist"/></td>
-            <td>
-              <!-- Si el precio es mayor a 10, agregar el emoji rojo -->
-              <xsl:choose>
-                <xsl:when test="price &gt; 10">
-                  <xsl:value-of select="price"/> &#128308; <!-- Emoji rojo --> 
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="price"/> &#128994; <!-- Emoji verde -->
-                </xsl:otherwise>
-              </xsl:choose>
-            </td>
-          </tr>
-        </xsl:for-each>
+        <!-- Aplicar templates a todos los CDs -->
+        <xsl:apply-templates select="catalog/cd"/>
       </tbody>
     </table>
   </div>
 </body>
 </html>
 </xsl:template>
+
+<!-- Template para cada CD -->
+<xsl:template match="cd">
+  <tr>
+    <td><xsl:value-of select="title"/></td>
+    <td><xsl:value-of select="artist"/></td>
+    <td>
+      <!-- Si el precio es mayor a 10, agregar el emoji rojo -->
+      <xsl:choose>
+        <xsl:when test="price &gt; 10">
+          <xsl:value-of select="price"/> &#128308; <!-- Emoji rojo --> 
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="price"/> &#128994; <!-- Emoji verde -->
+        </xsl:otherwise>
+      </xsl:choose>
+    </td>
+  </tr>
+</xsl:template>
+
 </xsl:stylesheet>
