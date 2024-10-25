@@ -18,21 +18,6 @@
     </tr>
     </xsl:for-each>
   </table>
-  <h2>My CD Collection</h2>
-  <table border="1">
-    <tr bgcolor="#cd4432">
-      <th style="text-align:left">Title</th>
-      <th style="text-align:left">Artist</th>
-      <th style="text-align:left">Country</th>
-    </tr>
-    <xsl:for-each select="catalog/cd">
-    <tr>
-      <td><xsl:value-of select="title"/></td>
-      <td><xsl:value-of select="artist"/></td>
-      <td><xsl:value-of select="country"/></td>
-    </tr>
-    </xsl:for-each>
-  </table>
 </body>
 </html>
 </xsl:template>
