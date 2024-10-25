@@ -49,6 +49,15 @@ Agreagado style
     }
 ```
 
+## 1.0.3
+
+Ordenar por precio
+
+```html
+        <xsl:for-each select="catalog/cd[price]">
+          <xsl:sort select="price" data-type="number" order="ascending"/>
+```
+
 ## Authors
 
 - [@marcosvil01](https://www.github.com/marcosvil01)

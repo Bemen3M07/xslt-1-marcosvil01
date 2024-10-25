@@ -41,8 +41,9 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Filtrar por precio menor a 10 -->
-        <xsl:for-each select="catalog/cd[price &lt; 10]">
+        <!-- Filtrar por precio menor a 10 y ordenar por precio -->
+        <xsl:for-each select="catalog/cd[price]">
+          <xsl:sort select="price" data-type="number" order="ascending"/>
         <tr>
           <td><xsl:value-of select="title"/></td>
           <td><xsl:value-of select="artist"/></td>
