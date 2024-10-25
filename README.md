@@ -25,14 +25,14 @@ Eliminar 'hola.txt' y 'adios.txt'.
 Cambiar bgcolor de la hoja de estilos 'cataleg.xslt'.
 
 
-## 1.0.1
+## 1.0.1 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/8bf511aeefb7fa53bd7c38792438e239dfcc8c02)
 Agregar Country y seleccionar solo artistas de USA.
 
 ```html
 <xsl:for-each select="catalog/cd[country='USA']">
 ```
 
-## 1.0.2 
+## 1.0.2 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/6d05f7ad642a111520d314b947039288752f2bb3)
 
 Ordenar por precio < 10.
 ```html
@@ -64,7 +64,7 @@ Agreagado style
     }
 ```
 
-## 1.0.3
+## 1.0.3 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/e21403361f5ea4d5ffc9537e63562d3e3dac6d16)
 
 Ordenar por precio
 
@@ -73,7 +73,7 @@ Ordenar por precio
           <xsl:sort select="price" data-type="number" order="ascending"/>
 ```
 
-## 1.0.4
+## 1.0.4 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/31bf96cd275799fae3291392c2eff752e5fa75da)
 
 Agregar emoji verde y rojo
 
@@ -87,14 +87,14 @@ Agregar emoji verde y rojo
     </xsl:if>
 ```
 
-## 1.0.5
+## 1.0.5 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/844025b5b8e432f17c59d4510622c5e360a62709)
 
 Lo mismo que el anterior pero usando 
 ```html 
 <xsl:choose> 
 ```
 
-## 1.0.6
+## 1.0.6 [Commit](https://github.com/Bemen3M07/xslt-1-marcosvil01/commit/d23b2a9e0b738fa7d535851749196b3a1bc463af)
 
 Aplicar xsl:apply-templates.
  
