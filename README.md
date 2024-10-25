@@ -4,6 +4,12 @@
 
 Bemen repo for Victor Naranjo
 
+# Python local server
+
+```python
+python -m http.server 8000
+```
+
 # Versions
 1.  [Primer commit](#100)
 2.  [Agregar Country y filtrar USA](#101)
