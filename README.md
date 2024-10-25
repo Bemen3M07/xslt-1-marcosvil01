@@ -4,6 +4,13 @@
 
 Bemen repo for Victor Naranjo
 
+# Versions
+1.  [Primer commit](#100)
+2.  [Agregar Country y filtrar USA](#101)
+3.  [Filtrar precio y mostrar menor a 10](#102)
+4.  [Filtrar precio orden ascendente](#103)
+5.  [Mostar emojis verde y rojo](#104)
+
 ## 1.0.0 
 Eliminar 'hola.txt' y 'adios.txt'.
 
@@ -56,6 +63,20 @@ Ordenar por precio
 ```html
         <xsl:for-each select="catalog/cd[price]">
           <xsl:sort select="price" data-type="number" order="ascending"/>
+```
+
+## 1.0.4
+
+Agregar emoji verde y rojo
+
+```html
+    <xsl:value-of select="price"/>
+    <xsl:if test="price &gt; 10">
+    &#128308;
+    </xsl:if>
+    <xsl:if test="price &lt;= 10">
+    &#128994;
+    </xsl:if>
 ```
 
 ## Authors

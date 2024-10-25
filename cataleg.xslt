@@ -41,20 +41,27 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Filtrar por precio menor a 10 y ordenar por precio -->
+        <!-- Filtrar por precio -->
         <xsl:for-each select="catalog/cd[price]">
-          <xsl:sort select="price" data-type="number" order="ascending"/>
-        <tr>
-          <td><xsl:value-of select="title"/></td>
-          <td><xsl:value-of select="artist"/></td>
-          <td><xsl:value-of select="price"/></td>
-        </tr>
+          <tr>
+            <td><xsl:value-of select="title"/></td>
+            <td><xsl:value-of select="artist"/></td>
+            <td>
+              <xsl:value-of select="price"/>
+              <!-- Si el precio es mayor a 10, emoji rojo -->
+              <xsl:if test="price &gt; 10">
+                &#128308; <!-- Emoji rojo -->
+              </xsl:if>
+              <!-- Si el precio es menor o igual a 10, emoji verde -->
+              <xsl:if test="price &lt;= 10">
+                &#128994; <!-- Emoji verde -->
+              </xsl:if>
+            </td>
+          </tr>
         </xsl:for-each>
       </tbody>
     </table>
   </div>
-
-
 </body>
 </html>
 </xsl:template>
