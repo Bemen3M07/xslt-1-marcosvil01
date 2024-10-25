@@ -9,8 +9,45 @@ Eliminar 'hola.txt' y 'adios.txt'.
 
 Cambiar bgcolor de la hoja de estilos 'cataleg.xslt'.
 
+
 ## 1.0.1
 Agregar Country y seleccionar solo artistas de USA.
+
+```html
+<xsl:for-each select="catalog/cd[country='USA']">
+```
+
+## 1.0.2 
+
+Ordenar por precio < 10.
+```html
+<xsl:for-each select="catalog/cd[price &lt; 10]">
+```
+Agregar Bootsrap
+```html
+<table border="1"> --> <table class="table table-bordered table-striped">
+```
+Agreagado style
+```css
+    body {
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #343a40;
+    }
+    table {
+      margin-top: 20px;
+      width: 80%;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    th {
+      background-color: #cd4432;
+      color: white;
+    }
+```
 
 ## Authors
 
